@@ -28,6 +28,14 @@ def extract_text_from_file(uploaded_file):
     else:
         return "Unsupported file type"
 
+ st.markdown(f"""
+         <style>
+         .stApp {{
+             background-image: url("https://img.freepik.com/free-photo/gray-abstract-wireframe-technology-background_53876-101941.jpg?w=996&t=st=1662725888~exp=1662726488~hmac=3b148d7688fd138851b5a25f611ca9cf08bf2d28382e218d5896f95f6baa2bd4");
+             background-attachment: fixed;
+             background-size: cover}}
+             </style>""",unsafe_allow_html=True)
+
 def read_pdf(file):
     with io.BytesIO(file.getvalue()) as f:
         reader = PdfReader(f)
