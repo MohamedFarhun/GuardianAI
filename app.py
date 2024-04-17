@@ -154,5 +154,5 @@ with st.sidebar:
         if feedback_text:
             st.write("Additional feedback:", feedback_text)
         st.markdown(
-            "Do visit our [Website](https://www.example.com) for more information."
+            "Do visit our [Website](https://github.com/MohamedFarhun/GuardianAI) for more information."
         )
