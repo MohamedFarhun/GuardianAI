@@ -28,16 +28,6 @@ def extract_text_from_file(uploaded_file):
     else:
         return "Unsupported file type"
 
-# Custom CSS to make the textarea smaller
-st.markdown(
-    """
-    <style>
-    textarea[data-baseweb="textarea"] {
-        height: 100px !important;  /* Smaller height */
-    }
-    </style>
-    """, unsafe_allow_html=True)
-
  # Assuming this is the correct level of indentation for your application
 def some_function():
     # Other code here (if any)
@@ -174,7 +164,7 @@ with st.sidebar:
     # Feedback Section
     st.title("Feedback")
     rating = st.slider("Rate your experience", 1, 5, 4)
-    feedback_text = st.text_area("Tell us more about your experience")
+    feedback_text = st.text_input("Tell us more about your experience")
     if st.button("Submit Rating"):
         st.success(f"Thanks for rating us {rating} stars!")
         if feedback_text:
