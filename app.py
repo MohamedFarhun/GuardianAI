@@ -110,7 +110,7 @@ if uploaded_file is not None:
     for i, question in enumerate(suggested_questions):
         if cols[i].button(question):
             response = get_chatgpt_response(question, rules, risk_threshold)
-            st.text_area("ChatGPT Response:", value=response, height=300)
+            st.text_area("ChatGPT Response:", value=response, height=220)
             risk_score = calculate_risk_score(response, risk_keywords)
             st.metric("Risk Score for this question", risk_score)
             if risk_score >= risk_threshold:
@@ -125,7 +125,7 @@ user_input = st.text_input("Type your message to ChatGPT:", key="user_input")
 if user_input:
     if rules:
         response = get_chatgpt_response(user_input, rules, risk_threshold)
-        st.text_area("ChatGPT Response:", value=response, height=300)
+        st.text_area("ChatGPT Response:", value=response, height=220)
 
         # Calculate and display risk
         risk_score = calculate_risk_score(response, risk_keywords)
