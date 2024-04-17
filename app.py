@@ -164,7 +164,7 @@ with st.sidebar:
     # Feedback Section
     st.title("Feedback")
     rating = st.slider("Rate your experience", 1, 5, 4)
-    feedback_text = st.text_area("Tell us more about your experience")
+    feedback_text = st.text_area("Tell us more about your experience", height=100)
     if st.button("Submit Rating"):
         st.success(f"Thanks for rating us {rating} stars!")
         if feedback_text:
